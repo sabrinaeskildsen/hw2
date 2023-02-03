@@ -68,20 +68,48 @@
 # The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
 # Delete existing data, so you'll start fresh each time this script is run.
-# Use `Model.destroy_all` code.
+# studio.destroy_all
+# movie.destroy_all
+# actor.destroy_all
+# role.destroy_all
+
 # TODO!
 
 # Generate models and tables, according to the domain model.
 # TODO!
 
-# Insert data into the database that reflects the sample data shown above.
-# Do not use hard-coded foreign key IDs.
-# TODO!
 
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
 puts ""
+
+# Insert data into the database that reflects the sample data shown above.
+# Do not use hard-coded foreign key IDs.
+# TODO!
+
+# new_studio = studio.new
+# new_studio["name"]="Warner Bros."
+# new_studio.save
+# puts "There are #{studio.all.count} studios"
+
+new_movie = movie.new
+new_movie["title"] = "Batman Begins"
+new_movie["year released"] = "2005"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = "Warner Bros."
+
+new_movie = movie.new
+new_movie["title"] = "The Dark Knight"
+new_movie["year released"] = "2008"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = "Warner Bros."
+
+new_movie = movie.new
+new_movie["title"] = "The Dark Knight Rises"
+new_movie["year released"] = "2012"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = "Warner Bros."
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
@@ -94,3 +122,4 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
