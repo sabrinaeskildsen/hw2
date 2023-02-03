@@ -68,10 +68,10 @@
 # The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
 # Delete existing data, so you'll start fresh each time this script is run.
-# studio.destroy_all
-# movie.destroy_all
-# actor.destroy_all
-# role.destroy_all
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
 
 # TODO!
 
@@ -88,26 +88,26 @@ puts ""
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
-# new_studio = studio.new
-# new_studio["name"]="Warner Bros."
-# new_studio.save
-# puts "There are #{studio.all.count} studios"
+new_studio = Studio.new
+new_studio["name"]="Warner Bros."
+new_studio.save
+puts "There are #{Studio.all.count} studios"
 
-new_movie = movie.new
+new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
-new_movie["year released"] = "2005"
+new_movie["year_released"] = "2005"
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = "Warner Bros."
 
-new_movie = movie.new
+new_movie = Movie.new
 new_movie["title"] = "The Dark Knight"
-new_movie["year released"] = "2008"
+new_movie["year_released"] = "2008"
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = "Warner Bros."
 
-new_movie = movie.new
+new_movie = Movie.new
 new_movie["title"] = "The Dark Knight Rises"
-new_movie["year released"] = "2012"
+new_movie["year_released"] = "2012"
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = "Warner Bros."
 
