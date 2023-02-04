@@ -265,8 +265,6 @@ Movie.all.each do |movie|
     puts "#{movie.title} #{movie.year_released} #{movie.rated} #{studio.name}"
   end
 
-  
-
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
@@ -275,6 +273,7 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
 
 Role.all.each do |role|
     movie = Movie.find_by(id: role.movie_id)
