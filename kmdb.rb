@@ -259,10 +259,9 @@ puts ""
 # TODO!
 # models/movie.rb
 
-
-Movie.all.each do |movie|
+  Movie.all.each do |movie|
     studio = Studio.find_by(id: movie.studio_id)
-    puts "#{movie.title} #{movie.year_released} #{movie.rated} #{studio.name}"
+    puts "#{movie.title.ljust(25)} #{movie.year_released.to_s.ljust(10)} #{movie.rated.ljust(10)} #{studio.name}"
   end
 
 # Prints a header for the cast output
@@ -274,12 +273,12 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
-Role.all.each do |role|
+  Role.all.each do |role|
     movie = Movie.find_by(id: role.movie_id)
     actor = Actor.find_by(id: role.actor_id)
-    puts "#{movie.title} #{actor.name} #{role.character_name}"
+    puts "#{movie.title.ljust(25)} #{actor.name.ljust(25)} #{role.character_name}"
   end
-
+  
 # Checking Data
 
 # studios = Studio.all
