@@ -274,7 +274,6 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
-
 Role.all.each do |role|
     movie = Movie.find_by(id: role.movie_id)
     actor = Actor.find_by(id: role.actor_id)
